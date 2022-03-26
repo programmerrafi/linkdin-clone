@@ -112,6 +112,9 @@ const Search = styled.div`
   position: relative;
   & > div {
     max-width: 280px;
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
     input {
       border: none;
       box-shadow: none;
@@ -126,6 +129,9 @@ const Search = styled.div`
       height: 34px;
       border-color: #dce6f1;
       vertical-align: text-top;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
   }
 `;
@@ -158,6 +164,7 @@ const Nav = styled.nav`
 
 const NavListWrap = styled.ul`
   display: flex;
+  justify-content: space-between;
   flex-wrap: nowrap;
   list-style-type: none;
 
