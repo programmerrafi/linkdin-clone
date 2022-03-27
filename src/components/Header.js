@@ -57,8 +57,10 @@ const Header = (props) => {
             <User>
               <a>
                 <img src="/images/user.svg" alt="" />
-                <span>Me</span>
-                <img src="/images/down-icon.svg" alt="" />
+                <span>
+                  Me
+                  <img src="/images/down-icon.svg" alt="" />
+                </span>
               </a>
 
               <SignOut>
@@ -86,11 +88,13 @@ const Container = styled.div`
   background-color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   left: 0;
-  padding: 0 24px;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 100;
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 const Content = styled.div`
@@ -104,6 +108,9 @@ const Content = styled.div`
 const Logo = styled.span`
   margin-right: 8px;
   font-size: 0px;
+  @media (max-width: 768px) {
+    padding: 8px 0;
+  }
 `;
 
 const Search = styled.div`
@@ -232,6 +239,11 @@ const SignOut = styled.div`
   transition-duration: 167ms;
   text-align: center;
   display: none;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    top: -34px;
+    border-radius: 5px 5px 0 0;
+  }
 `;
 
 const User = styled(NavList)`
